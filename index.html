@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+  <script
+    src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+  <link rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+    type="text/css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Atlas</title>
+</head>
+
+<body>
+  <h1 class="heading">Navigate the world with ease</h1>
+  <p>Search for a location and select a category to find nearby places and weather details</p>
+  <p>if you wanna direction then use left search bar</p>
+  <div id="search-box">
+    <input type="text" id="location-search" placeholder="Search for a city..." />
+    <select id="category-filter">
+      <option value="default">Select a category</option>
+      <option value="airport">Airports</option>
+      <option value="atm">ATM</option>
+      <option value="bank">Banks</option>
+      <option value="bar">Bars</option>
+      <option value="bus_station">Bus Stations</option>
+      <option value="cafe">Hotels</option>
+      <option value="college">Colleges</option>
+      <option value="gym">Gyms</option>
+      <option value="hospital">Hospitals</option>
+      <option value="library">Libraries</option>
+      <option value="mall">Malls</option>
+      <option value="movie_theater">Movie Theaters</option>
+      <option value="museum">Museums</option>
+      <option value="park">Parks</option>
+      <option value="petrol">Gas Station</option>
+      <option value="restaurant">Restaurants</option>
+      <option value="school">Schools</option>
+      <option value="train_station">Railway Stations</option>
+    </select>
+    <button onclick="searchLocation()">
+      Search
+    </button>
+  </div>
+  <div id="map" class="map"></div>
+  <div id="weather-details"></div>
+  <div id="nearby-places"></div>
+</body>
+
+</html>
